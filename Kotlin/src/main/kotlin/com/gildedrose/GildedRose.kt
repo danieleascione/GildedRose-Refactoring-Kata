@@ -1,8 +1,12 @@
 package com.gildedrose
 
-class GildedRose(var items: List<Item>) {
+object GildedRose {
 
-    fun updateQuality() {
+    fun updateQuality(items: List<Item>): List<Item> {
+        return items.map { it.copy(sellIn = it.sellIn -1, quality = it.quality -1) }
+    }
+
+    /** fun updateQualityOld() {
         for (i in items.indices) {
             if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
                 if (items[i].quality > 0) {
@@ -52,7 +56,6 @@ class GildedRose(var items: List<Item>) {
                 }
             }
         }
-    }
-
+    } */
 }
 

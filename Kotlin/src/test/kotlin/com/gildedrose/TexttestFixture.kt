@@ -1,6 +1,6 @@
 package com.gildedrose
 
-fun main(args: Array<String>) {
+/** fun main(args: Array<String>) {
 
     println("OMGHAI!")
 
@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
             // this conjured item does not work properly yet
             Item("Conjured Mana Cake", 3, 6))
 
-    val app = GildedRose(items)
+    val app = com.gildedrose.GildedRose(items)
 
     var days = 2
     if (args.size > 0) {
@@ -31,4 +31,4 @@ fun main(args: Array<String>) {
         println()
         app.updateQuality()
     }
-}
+} */
