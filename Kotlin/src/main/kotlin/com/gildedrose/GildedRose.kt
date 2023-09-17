@@ -2,11 +2,7 @@ package com.gildedrose
 
 object GildedRose {
 
-    fun updateQuality(items: List<Item>): List<Item> {
-        return items.map { it.copy(sellIn = it.sellIn -1, quality = it.quality -1) }
-    }
-
-    /** fun updateQualityOld() {
+     fun updateQuality(items: List<Item>): List<Item> {
         for (i in items.indices) {
             if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
                 if (items[i].quality > 0) {
@@ -43,7 +39,8 @@ object GildedRose {
                     if (items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
                         if (items[i].quality > 0) {
                             if (items[i].name != "Sulfuras, Hand of Ragnaros") {
-                                items[i].quality = items[i].quality - 1
+                                // WTH was this doing
+                                // items[i].quality = items[i].quality - 1
                             }
                         }
                     } else {
@@ -56,6 +53,7 @@ object GildedRose {
                 }
             }
         }
-    } */
+         return items
+    }
 }
 
